@@ -8,7 +8,7 @@ Aqui, cada projeto é uma oportunidade de experimentar, testar possibilidades, r
 
 ## Entre na experiência
 
-**[Abrir a vitrine do Laboratório Criativo](./index.html)**
+**[Abrir a vitrine do Laboratório Criativo](https://d-ribeiro-dev.github.io/laboratorio-criativo/)**
 
 Conheça o laboratório, explore os bastidores e descubra os projetos.
 
@@ -18,7 +18,7 @@ Este repositório registra uma experiência de criação que começou com uma id
 
 O que parecia ser apenas um projeto criativo acabou se tornando também um estudo sobre colaboração humano–IA, engenharia de prompts, direção criativa, desenvolvimento web e refinamento iterativo.
 
-**[Conhecer a mini HQ](./hq-vitrine.html)**
+**[Conhecer a mini HQ](https://d-ribeiro-dev.github.io/laboratorio-criativo/hq-vitrine.html)**
 
 **[Ler o estudo de caso completo](./estudo-de-caso-mini-hq/relatorio-final.md)**
 

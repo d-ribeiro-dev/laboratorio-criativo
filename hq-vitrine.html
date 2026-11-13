@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d1b">
+  <title>Grand Theft Family | Acesso pela vitrine</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #100d1b;
+      color: #f7f2ff;
+      font-family: Segoe UI, Arial, sans-serif;
+    }
+
+    .return-bar {
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0 clamp(12px, 3vw, 32px);
+      background: #171222;
+      border-bottom: 1px solid rgba(226,211,255,.18);
+    }
+
+    .return-label {
+      font-size: 11px;
+      letter-spacing: .14em;
+      color: #b9aecb;
+    }
+
+    .return-button {
+      position: fixed;
+      right: clamp(14px, 3vw, 30px);
+      bottom: clamp(14px, 3vh, 28px);
+      z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .72rem 1rem;
+      border: 1px solid rgba(255,130,214,.55);
+      border-radius: 3px;
+      background: rgba(23,18,34,.94);
+      box-shadow: 0 8px 28px rgba(0,0,0,.35);
+      color: #ff9bdd;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+
+    .return-button:hover {
+      background: #2b1d37;
+      border-color: #ff82d6;
+      transform: translateY(-2px);
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: calc(100% - 54px);
+      border: 0;
+      background: #100d1b;
+    }
+
+    @media (max-width: 560px) {
+      .return-bar {
+        height: 50px;
+      }
+
+      .return-label {
+        font-size: 9px;
+      }
+
+      iframe {
+        height: calc(100% - 50px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="return-bar">
+    <span class="return-label">ACESSO PELA VITRINE</span>
+  </header>
+
+  <iframe
+    src="./mini-hq-gta/index.html"
+    title="Mini HQ Grand Theft Family">
+  </iframe>
+
+  <a class="return-button" href="./index.html#inicio">
+    &#8592; Voltar ao início
+  </a>
+</body>
+</html>

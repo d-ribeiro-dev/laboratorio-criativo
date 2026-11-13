@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3a45e">
+  <meta name="description" content="Conheça a família de Los Santos e leia Grand Theft Family — Operation: No One Left Behind.">
+  <title>Grand Theft Family — Los Santos Stories</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./scripts.js"></script>
+</head>
+<body>
+  <div class="city-backdrop" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="site-header">
+      <button class="brand-mark" type="button" data-go="welcome" aria-label="Voltar ao início">
+        <span class="brand-small">GRAND THEFT</span>
+        <span class="brand-large">FAMILY</span>
+      </button>
+      <div class="header-center">
+        <span class="header-kicker">LOS SANTOS STORIES</span>
+        <span class="header-divider" aria-hidden="true">/</span>
+        <span id="stage-label">A HISTÓRIA DA FAMÍLIA</span>
+      </div>
+      <button class="header-link" type="button" data-go="team"><span id="header-link-label">CONHECER A EQUIPE</span> <span aria-hidden="true">↗</span></button>
+    </header>
+
+    <main id="main-content">
+      <section class="screen screen-welcome is-active" id="screen-welcome" aria-labelledby="welcome-title">
+        <div class="welcome-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> EPISÓDIO 01 · UMA HISTÓRIA DE LOS SANTOS</p>
+          <h1 id="welcome-title">GRAND THEFT<br><span>FAMILY</span></h1>
+          <p class="welcome-lede">A cidade é sua. <strong>A família é seu ponto fraco.</strong></p>
+          <p class="welcome-description">Cinco vidas, um passado enterrado e uma cidade que nunca esquece. Conheça a equipe antes de entrar em <em>Operation: No One Left Behind</em>.</p>
+          <button class="button button-primary button-large" type="button" id="meet-family">
+            CONHECER A FAMÍLIA <span class="button-arrow" aria-hidden="true">→</span>
+          </button>
+          <div class="welcome-meta" aria-label="Detalhes da série">
+            <span>LOS SANTOS</span><span class="meta-dot" aria-hidden="true"></span><span>FAMÍLIA · AÇÃO · SUSPENSE</span>
+          </div>
+        </div>
+        <figure class="welcome-art">
+          <img src="./images/banner-los-santos.webp" alt="Os cinco integrantes da família diante do pôr do sol de Los Santos" fetchpriority="high">
+        </figure>
+        <div class="welcome-bottom" aria-hidden="true"><span>UMA FAMÍLIA</span><span>UM PASSADO</span><span>NINGUÉM FICA PARA TRÁS</span></div>
+      </section>
+
+      <section class="screen screen-team" id="screen-team" aria-labelledby="team-title" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> LOS SANTOS STORIES · ARQUIVO DA EQUIPE</p>
+            <h2 id="team-title">CONHEÇA <span>A FAMÍLIA</span></h2>
+          </div>
+          <p class="section-note">Cinco integrantes.<br>Uma regra: ninguém fica para trás.</p>
+        </div>
+
+        <div class="team-layout">
+          <figure class="team-art art-frame">
+            <img id="team-character-image" alt="" loading="lazy" hidden>
+            <div class="portrait-placeholder" id="portrait-placeholder" role="img" aria-label="Retrato individual de Rodrigo não disponível">
+              <span class="portrait-initial" id="portrait-initial">R</span>
+              <strong id="portrait-placeholder-label">FOTO DE RODRIGO</strong>
+              <small>SEM FOTO INDIVIDUAL NESTE PACOTE</small>
+            </div>
+            <figcaption><span>RETRATO INDIVIDUAL</span><span id="team-image-label">RODRIGO</span></figcaption>
+          </figure>
+          <article class="profile-card" aria-live="polite" aria-atomic="true">
+            <div class="profile-topline"><span class="profile-index" id="profile-index">01 / 05</span><span class="profile-status"><span aria-hidden="true"></span> INTEGRANTE ATIVO</span></div>
+            <p class="profile-alias" id="profile-alias">THE OLD SCHOOL</p>
+            <h3 id="profile-name">Rodrigo</h3>
+            <p class="profile-tagline" id="profile-tagline">Experiência. Respeito. Tradição.</p>
+            <p class="profile-description" id="profile-description"></p>
+            <div class="profile-role"><span class="role-icon" aria-hidden="true">✦</span><div><span>NA OPERAÇÃO</span><strong id="profile-role"></strong></div></div>
+            <nav class="team-picker" aria-label="Selecionar integrante da família">
+              <div class="team-picker-label"><span>SELECIONE UM PERFIL</span><span>01 — 05</span></div>
+              <div class="team-tabs" id="team-tabs"></div>
+            </nav>
+            <div class="profile-controls">
+              <button class="button button-secondary" type="button" id="previous-profile" aria-label="Personagem anterior">← ANTERIOR</button>
+              <span id="profile-count" aria-live="polite">PERFIL 1 DE 5</span>
+              <button class="button button-secondary" type="button" id="next-profile" aria-label="Próximo personagem">PRÓXIMO →</button>
+            </div>
+          </article>
+          <aside class="skills-card" aria-labelledby="skills-title">
+            <div class="skills-heading">
+              <div>
+                <p class="skills-kicker">DOSSIÊ DE HABILIDADES</p>
+                <h3 id="skills-title">ATRIBUTOS</h3>
+              </div>
+              <span class="skills-scale">MAX 10</span>
+            </div>
+            <div class="reputation-block">
+              <span class="reputation-label">REPUTAÇÃO EM LOS SANTOS</span>
+              <div class="reputation-stars" id="reputation-stars" role="img" aria-label="Reputação: 5 de 5 estrelas"></div>
+            </div>
+            <div class="skill-list" id="skill-list" aria-label="Atributos do personagem"></div>
+            <p class="skills-note">Leitura de jogo baseada na história; valores podem ser ajustados.</p>
+          </aside>
+        </div>
+        <div class="section-actions">
+          <button class="text-button" type="button" data-go="welcome">← VOLTAR AO INÍCIO</button>
+          <button class="button button-primary" type="button" id="open-episode">CONHECER O EPISÓDIO <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="screen screen-episode" id="screen-episode" aria-labelledby="episode-title" hidden>
+        <div class="episode-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> GRAND THEFT FAMILY · LOS SANTOS STORIES</p>
+          <p class="episode-number">EPISÓDIO <strong>01</strong></p>
+          <h2 id="episode-title">OPERATION:<br><span>NO ONE LEFT BEHIND</span></h2>
+          <p class="episode-chapter">CAPÍTULO 01 · THE MISSING SPARK</p>
+          <p class="episode-summary">Juh registra sem querer uma conversa dos Los Cuervos — e capta o nome de Rodrigo junto a um projeto que deveria continuar enterrado. A família tem 48 horas para trazê-la de volta.</p>
+          <div class="episode-tags"><span>AÇÃO</span><span>SUSPENSE</span><span>DRAMA FAMILIAR</span></div>
+          <div class="episode-buttons">
+            <button class="button button-primary button-large" type="button" id="start-comic">COMEÇAR A HQ <span class="button-arrow" aria-hidden="true">→</span></button>
+            <button class="text-button" type="button" data-go="team">← REVER A EQUIPE</button>
+          </div>
+        </div>
+        <figure class="episode-cover art-frame">
+          <img src="./images/grand-theft-family-capa.webp" alt="Capa de Grand Theft Family — Episódio 01: Operation: No One Left Behind" loading="lazy">
+          <figcaption><span>ARQUIVO · EP 01</span><span>OPERATION SPARK</span></figcaption>
+        </figure>
+      </section>
+
+      <section class="screen screen-reader" id="screen-reader" aria-labelledby="reader-title" hidden>
+        <div class="reader-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> GRAND THEFT FAMILY · EPISÓDIO 01</p>
+            <h2 id="reader-title">OPERATION: <span>NO ONE LEFT BEHIND</span></h2>
+          </div>
+          <div class="reader-heading-actions">
+            <button class="text-button zoom-trigger" type="button" id="zoom-open" aria-label="Ampliar a capa" title="Ampliar a capa">
+              <svg class="zoom-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 5 5"></path></svg>
+              <span>AMPLIAR QUADRO</span>
+            </button>
+            <button class="text-button reader-return" type="button" id="back-to-episode">← VOLTAR AO EPISÓDIO</button>
+          </div>
+        </div>
+        <div class="reading-stage">
+          <button class="page-edge page-edge-left" type="button" id="previous-page-edge" aria-label="Página anterior"><span aria-hidden="true">‹</span></button>
+          <figure class="comic-page-frame" id="comic-frame">
+            <img id="comic-image" src="./images/grand-theft-family-capa.webp" alt="Capa da HQ Grand Theft Family" fetchpriority="high">
+          </figure>
+          <button class="page-edge page-edge-right" type="button" id="next-page-edge" aria-label="Próxima página"><span aria-hidden="true">›</span></button>
+        </div>
+        <div class="reader-footer">
+          <div class="reader-progress-copy"><span id="page-label" aria-live="polite">CAPA</span><span id="page-count">CAPA · 8 IMAGENS</span></div>
+          <progress class="reader-progress" id="reading-progress" max="8" value="1" aria-label="Progresso de leitura"></progress>
+          <div class="reader-end-actions" id="reader-end-actions" hidden>
+            <p>FIM DO EPISÓDIO 01 <span aria-hidden="true">·</span> TO BE CONTINUED...</p>
+            <button class="text-button" type="button" id="return-team">VOLTAR À FAMÍLIA</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>GRAND THEFT FAMILY <i>·</i> LOS SANTOS STORIES</span>
+      <span>UMA HISTÓRIA DE FAMÍLIA, LEALDADE E SEGREDOS.</span>
+    </footer>
+    <dialog class="panel-zoom" id="panel-zoom" aria-labelledby="panel-zoom-title">
+      <div class="panel-zoom-shell">
+        <header class="panel-zoom-header">
+          <div>
+            <p class="zoom-kicker" id="zoom-kicker">AMPLIAÇÃO DA HQ</p>
+            <h3 id="panel-zoom-title">CAPA</h3>
+          </div>
+          <button class="zoom-close" type="button" id="zoom-close" aria-label="Fechar ampliação" title="Fechar ampliação">×</button>
+        </header>
+        <div class="panel-zoom-stage">
+          <button class="zoom-step" type="button" id="zoom-previous" aria-label="Quadro anterior" title="Quadro anterior">‹</button>
+          <figure class="zoom-crop" id="zoom-crop">
+            <img id="zoom-image" alt="" draggable="false">
+          </figure>
+          <button class="zoom-step" type="button" id="zoom-next" aria-label="Próximo quadro" title="Próximo quadro">›</button>
+        </div>
+        <footer class="panel-zoom-footer">
+          <span id="zoom-count" aria-live="polite">CAPA · IMAGEM ÚNICA</span>
+          <span id="zoom-hint">A capa é exibida inteira.</span>
+        </footer>
+      </div>
+    </dialog>
+  </div>
+</body>
+</html>

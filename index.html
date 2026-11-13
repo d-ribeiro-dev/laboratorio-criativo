@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d1b">
+  <meta name="description" content="Meu laboratório criativo: projetos, experimentos e aprendizados em tecnologia, inteligência artificial e criação.">
+  <title>Meu Laboratório Criativo</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./scripts.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">✦</span><span>MEU LABORATÓRIO <b>CRIATIVO</b></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span><span></span></button>
+    <nav id="menu-principal" class="nav" aria-label="Navegação principal">
+      <a href="#projetos">Projetos</a><a href="#processo">Bastidores</a><a href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <img class="hero-art" src="./assets/capa-laboratorio-criativo.png" alt="Ilustração do Laboratório Criativo: uma mulher ruiva de óculos rosados, um gato, livros de programação e referências a Los Santos." fetchpriority="high">
+      <div class="hero-caption">
+        <p class="eyebrow"><span></span> IDEIAS EM CONSTRUÇÃO</p>
+        <h1 id="hero-title">Um laboratório para <em>criar, aprender e compartilhar.</em></h1>
+        <a class="button button-primary" href="#projetos">Explorar projetos <span aria-hidden="true">↘</span></a>
+      </div>
+    </section>
+
+    <section class="intro section-wrap" id="sobre">
+      <div><p class="eyebrow">BEM-VINDA AO MEU ESPAÇO</p><h2>Não é só sobre o que eu construo.<br><em>É sobre como eu chego lá.</em></h2></div>
+      <p class="intro-copy">Aqui ficam projetos, estudos, testes e ideias que saíram do papel. Alguns estão finalizados; outros ainda estão em evolução. O processo também faz parte do resultado.</p>
+    </section>
+
+    <section class="projects section-wrap" id="projetos">
+      <div class="section-heading"><div><p class="eyebrow">EM DESTAQUE</p><h2>Projetos em <em>cena</em></h2></div><span class="section-index">PROJETOS SELECIONADOS</span></div>
+      <article class="project-feature">
+        <div class="project-art"><img src="./mini-hq-gta/images/grand-theft-family-capa.webp" alt="Capa da mini HQ Grand Theft Family — Los Santos Stories" loading="lazy"><span class="art-label">PROJETO CRIATIVO · IA</span></div>
+        <div class="project-info"><p class="project-kicker">PROJETO EM DESTAQUE</p><h3>Grand Theft Family<br><em>Los Santos Stories</em></h3><p>Uma mini HQ criada com apoio de inteligência artificial, direção criativa, construção de personagens e uma experiência de leitura interativa.</p><ul class="project-tags"><li>Criação com IA</li><li>Storytelling</li><li>Web interativa</li></ul><a class="button button-primary" href="./hq-vitrine.html">Entrar na mini HQ <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <div class="project-grid">
+        <article class="project-card"><p class="project-kicker">ESTUDO DE CASO</p><h3>Por trás da criação</h3><p>As decisões, os experimentos, as correções e os aprendizados que deram forma ao projeto.</p><a class="card-link" href="./estudo.html">Conhecer o estudo <span aria-hidden="true">↗</span></a></article>
+        <article class="project-card project-card-muted"><p class="project-kicker">PRÓXIMOS EXPERIMENTOS</p><h3>Em construção</h3><p>Novas experiências com programação, inteligência artificial, dados e automações vão aparecer por aqui.</p><span class="coming-soon">NOVAS IDEIAS A CAMINHO</span></article>
+      </div>
+    </section>
+
+    <section class="process" id="processo">
+      <div class="section-wrap process-inner">
+        <div><p class="eyebrow">OS BASTIDORES TAMBÉM IMPORTAM</p><h2>Da primeira pergunta<br><em>ao resultado final.</em></h2><p class="process-lead">Escolha uma etapa para espiar um pouco do que aconteceu nos bastidores.</p></div>
+        <div class="process-explorer">
+          <div class="stage-list" role="group" aria-label="Etapas do processo">
+            <button class="stage-button is-active" type="button" data-stage="investigar" aria-pressed="true"><span>Investigar</span><span aria-hidden="true">↗</span></button>
+            <button class="stage-button" type="button" data-stage="planejar" aria-pressed="false"><span>Planejar</span><span aria-hidden="true">↗</span></button>
+            <button class="stage-button" type="button" data-stage="construir" aria-pressed="false"><span>Construir</span><span aria-hidden="true">↗</span></button>
+            <button class="stage-button" type="button" data-stage="validar" aria-pressed="false"><span>Testar e documentar</span><span aria-hidden="true">↗</span></button>
+          </div>
+          <article class="stage-detail" aria-live="polite" aria-atomic="true">
+            <span class="detail-icon" id="stage-icon" aria-hidden="true">⌕</span>
+            <p class="project-kicker" id="stage-kicker">O PONTO DE PARTIDA</p>
+            <h3 id="stage-title">Uma página começou a virar uma história.</h3>
+            <p id="stage-copy">A ideia inicial era apresentar cinco personagens da família em uma página inspirada em GTA. Durante a exploração, surgiu uma possibilidade maior: transformar a apresentação em uma mini HQ, com começo, conflito e continuidade.</p>
+            <p class="stage-source" id="stage-source">Base documental: registro de origem e evolução do projeto.</p>
+            <a class="subtle-link" href="./estudo.html#processo-detalhado">Ver o processo completo <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">✦</span><span>MEU LABORATÓRIO <b>CRIATIVO</b></span></a><p>Feito de curiosidade, código e muitas ideias.</p><a class="back-top" href="#inicio">Voltar ao topo ↑</a></footer>
+</body>
+</html>

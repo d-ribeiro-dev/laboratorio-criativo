@@ -131,7 +131,15 @@ const zoomOpenButton = document.getElementById("zoom-open");
 const zoomImage = document.getElementById("zoom-image");
 const zoomCrop = document.getElementById("zoom-crop");
 const compactPcMedia = window.matchMedia("(min-width: 931px) and (max-height: 840px)");
-const portraitExtensions = ["webp", "png", "jpg", "jpeg"];
+const portraitCache = new Map();
+
+family.forEach((profile) => {
+  const source = `./images/personagens/${profile.imageKey}.png`;
+  const portrait = new Image();
+  portrait.src = source;
+  portraitCache.set(profile.imageKey, portrait);
+});
+
 let portraitRequest = 0;
 let activeScreen = "welcome";
 let activeProfile = 0;
@@ -176,6 +184,7 @@ function showScreen(name, { focus = false } = {}) {
 syncDesktopCompactMode();
 window.addEventListener("resize", syncDesktopCompactMode, { passive: true });
 
+
 function updateProfilePortrait(profile) {
   const image = document.getElementById("team-character-image");
   const label = document.getElementById("team-image-label");
@@ -183,41 +192,42 @@ function updateProfilePortrait(profile) {
   const placeholderInitial = document.getElementById("portrait-initial");
   const placeholderLabel = document.getElementById("portrait-placeholder-label");
   const request = ++portraitRequest;
-  image.hidden = true;
-  placeholder.hidden = false;
-  placeholder.setAttribute("aria-label", `Retrato individual de ${profile.name} não disponível neste pacote.`);
-  placeholderInitial.textContent = profile.name.trim().charAt(0).toLocaleUpperCase("pt-BR");
-  placeholderLabel.textContent = `FOTO DE ${profile.name.toLocaleUpperCase("pt-BR")}`;
+
+  const source = `./images/personagens/${profile.imageKey}.png`;
+
   label.textContent = profile.name.toLocaleUpperCase("pt-BR");
 
-  const imageBases = [
-    `./images/${profile.legacyImageKey}`,
-    `./images/personagens/${profile.imageKey}`,
-  ];
+  const candidate = new Image();
 
-  function trySource(baseIndex, extensionIndex) {
-    if (baseIndex >= imageBases.length) return;
-    const source = `${imageBases[baseIndex]}.${portraitExtensions[extensionIndex]}`;
-    const candidate = new Image();
-    candidate.onload = () => {
-      if (request !== portraitRequest) return;
-      image.src = source;
-      image.alt = `Retrato individual de ${profile.name}`;
-      image.hidden = false;
-      placeholder.hidden = true;
-    };
-    candidate.onerror = () => {
-      if (extensionIndex + 1 < portraitExtensions.length) {
-        trySource(baseIndex, extensionIndex + 1);
-      } else {
-        trySource(baseIndex + 1, 0);
-      }
-    };
-    candidate.src = source;
-  }
+  candidate.onload = () => {
+    if (request !== portraitRequest) return;
 
-  trySource(0, 0);
+    image.src = source;
+    image.alt = `Retrato individual de ${profile.name}`;
+    image.hidden = false;
+    placeholder.hidden = true;
+  };
+
+  candidate.onerror = () => {
+    if (request !== portraitRequest) return;
+
+    image.hidden = true;
+    placeholder.hidden = false;
+    placeholderInitial.textContent = profile.name
+      .trim()
+      .charAt(0)
+      .toLocaleUpperCase("pt-BR");
+    placeholderLabel.textContent =
+      `FOTO DE ${profile.name.toLocaleUpperCase("pt-BR")}`;
+    placeholder.setAttribute(
+      "aria-label",
+      `Retrato individual de ${profile.name} não disponível.`
+    );
+  };
+
+  candidate.src = source;
 }
+
 
 function renderProfile() {
   const profile = family[activeProfile];
